@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="page_title">معرض أعمالي البرمجية | مطور تطبيقات محترف</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!-- Loader جديد بتأثيرات مميزة -->
+    <div class="loader-container" id="loader">
+
+        <div class="loader-text" data-translate="loading_portfolio">Loading Portfolio</div>
+        <div class="loader-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <!-- شريط التنقل المحسن -->
+    <nav class="navbar">
+        
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="#home">
+                    <span class="logo-text" data-translate="logo_name">محمد الفرد</span>
+                    <span class="logo-badge" data-translate="logo_job">مطور تطبيقات</span>
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active" data-translate="nav_home"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="#projects" class="nav-link" data-translate="nav_projects"><i class="fas fa-code"></i> أعمالي</a></li>
+                <li><a href="#skills" class="nav-link" data-translate="nav_skills"><i class="fas fa-cogs"></i> مهاراتي</a></li>
+                <li><a href="#about" class="nav-link" data-translate="nav_about"><i class="fas fa-user"></i> عني</a></li>
+                <li><a href="#contact" class="nav-link" data-translate="nav_contact"><i class="fas fa-envelope"></i> تواصل</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+<div class="language-selector">
+  <div class="selector-container" tabindex="0">
+    <div class="selected-language" id="selectedLanguage">
+      <span class="language-flag" id="selectedFlag">🌐</span>
+      <span class="language-text" id="selectedText" data-translate="lang_current">العربية</span>
+      <span class="dropdown-icon">▼</span>
+    </div>
+    <ul class="language-options" id="languageOptions">
+      <li data-value="ar" class="active">
+        <span class="language-flag">🇸🇦</span>
+        <span class="language-text" data-translate="lang_ar">العربية</span>
+      </li>
+      <li data-value="en">
+        <span class="language-flag">🇬🇧</span>
+        <span class="language-text" data-translate="lang_en">English</span>
+      </li>
+    </ul>
+  </div>
+  <select id="langSwitcher" class="hidden-select">
+    <option value="ar" data-translate="lang_ar">العربية</option>
+    <option value="en" data-translate="lang_en">English</option>
+  </select>
+</div>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- القسم الرئيسي المحسن -->
+    <header id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="particles-js" id="particles-js"></div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="animate__animated animate__fadeInDown">
+                    <span data-translate="welcome">مرحباً، أنا</span> <span class="highlight" data-translate="my_name">محمد الفرد</span>
+                </h1>
+                <h2 class="animate__animated animate__fadeInDown animate__delay-1s" data-translate="job_title">مطور تطبيقات</h2>
+                <p class="animate__animated animate__fadeIn animate__delay-2s" data-translate="welcome_desc">
+                    أصمم وأطور تطبيقات عالية الجودة تلبي احتياجات المستخدمين وتقدم تجربة فريدة
+                </p>
+                
+                <div class="hero-actions animate__animated animate__fadeInUp animate__delay-3s">
+                    <a href="#projects" class="btn btn-primary" data-translate="view_projects">
+                        <i class="fas fa-eye"></i> عرض أعمالي
+                    </a>
+                    <a href="#contact" class="btn btn-secondary" data-translate="contact_me">
+                        <i class="fas fa-paper-plane"></i> تواصل معي
+                    </a>
+                </div>
+            </div>
+            
+    <div class="vscode-container">
+        <div class="title-bar">
+            <div class="window-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+            </div>
+            <div class="title">main.dart - Mohammed's Portfolio</div>
+            <div class="actions">
+                <i class="fas fa-play run-button"></i>
+            </div>
+        </div>
+    
+        
+        <div class="editor-container">
+            <div class="tab-bar">
+                <div class="tab active">main.dart</div>
+                <div class="tab">home_page.dart</div>
+            </div>
+            
+            <div class="editor">
+                <div class="line-numbers"></div>
+                <div class="code-container">
+                    <pre id="dart-code" class="dart-code"></pre>
+                </div>
+            </div>
+            
+            <div class="status-bar">
+                <div class="left-section">
+                    <span class="branch"><i class="fas fa-code-branch"></i> main</span>
+                </div>
+                <div class="right-section">
+                    <span class="language">Dart</span>
+                    <span class="cursor-position">Ln 1, Col 1</span>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow-down"></div>
+        </div>
+    </header>
+    
+    <!-- قسم المشاريع المحسن -->
+    <section id="projects" class="projects-section">
+        <div class="section-header">
+            <h2 class="section-title" data-translate="projects_title">أعمالي البرمجية</h2>
+            <p class="section-subtitle" data-translate="projects_subtitle">أحدث المشاريع التي قمت بتطويرها</p>
+            <div class="section-divider"></div>
+        </div>
+        
+        <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all" data-translate="filter_all">الكل</button>
+            <button class="filter-btn" data-filter="mobile" data-translate="filter_mobile">تطبيقات موبايل</button>
+            <button class="filter-btn" data-filter="web" data-translate="filter_web">تطبيقات ويب</button>
+   
+        </div>
+        
+        <div class="projects-grid">
+            <!-- مشروع 1 -->
+            <div class="project-card" data-category="mobile">
+                <div class="project-image">
+                    <img src="assets/Screenshot 1447-02-06 at 5.42.11 PM.png" style="width: 30%;" alt="تطبيق Cross-Platform 1">
+                    <img src="assets/Screenshot 1447-02-06 at 5.41.01 PM.png" style="width: 30%;" alt="تطبيق Cross-Platform 1">
+                     <img src="assets/Screenshot 1447-02-06 at 5.41.22 PM.png" style="width: 30%;" alt="تطبيق Cross-Platform 1">
+                    <div class="project-overlay">
+                        <div class="project-badges">
+                            <span class="badge flutter">Flutter</span>
+                            <span class="badge firebase">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3 data-translate="project1_title">تطبيق عقاركم</h3>
+                    <p data-translate="project1_desc">تطبيق يخدم العرض والطلب في السوق العقاري ويقدم تجربة مستخدم متميزة. مملوك لشركة عقاركم التابعة لاعمال النضة القابضة</p>
+
+                    <div class="project-actions">
+                        <a href="https://apps.apple.com/sa/app/%D8%B9%D9%82%D8%A7%D8%B1-%D9%83%D9%88%D9%85-aqarcom/id1568547797" class="btn btn-sm btn-primary" data-translate="ios_version">
+                            <i class="fas fa-eye"></i> نسخة IOS
+                        </a>
+                                 <a href="https://play.google.com/store/apps/details?id=com.entlq.aqarcom&hl=en_US&gl=US" class="btn btn-sm btn-primary" data-translate="android_version">
+                            <i class="fas fa-eye"></i> نسخة Android
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- مشروع 2 -->
+            <div class="project-card" data-category="mobile">
+                <div class="project-image">
+                    <img src="assets/Screenshot 1447-02-06 at 5.48.15 PM.png" style="width: 30%;" alt="تطبيق Cross-Platform 2">
+                      <img src="assets/Screenshot 1447-02-06 at 5.48.28 PM.png" style="width: 33%;" alt="تطبيق Cross-Platform 2">
+                       <img src="assets/Screenshot 1447-02-06 at 5.50.59 PM.png" style="width: 33%;" alt="تطبيق Cross-Platform 2">
+                    <div class="project-overlay">
+                        <div class="project-badges">
+                            <span class="badge react">React Native</span>
+                            <span class="badge node">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-details">
+                    <h3 data-translate="project2_title">تطبيق أفرز عقارك</h3>
+                 <p data-translate="project2_desc">
+    تطبيق يساعد ملاك العقارات على فرز عقاراتهم بشكل فعال وسهل
+    <span class="test-badge" data-translate="under_test">(التطبيق تحت الاختبار )</span>
+</p>
+          
+         <div class="project-actions">
+    <a href="#" class="btn btn-sm btn-primary btn-disabled" tabindex="-1" aria-disabled="true" data-translate="ios_version">
+        <i class="fas fa-eye"></i> نسخة IOS
+    </a>
+    <a href="#" class="btn btn-sm btn-primary btn-disabled" tabindex="-1" aria-disabled="true" data-translate="android_version">
+        <i class="fas fa-eye"></i> نسخة Android
+    </a>
+</div>
+                </div>
+            </div>
+            
+            <!-- مشروع 3 -->
+            
+            <!-- مشروع 4 -->
+            <div class="project-card" data-category="web">
+                <div class="project-image" style="justify-items:center">
+                    <img src="assets/Screenshot 1447-02-06 at 5.58.28 PM.png" style="width: 70%;display: flex; justify-content: center; align-items: center;" alt="تطبيق ويب">
+             
+                </div>
+                <div class="project-details">
+                    <h3 data-translate="project4_title">نظام لوجستي</h3>
+                    <p data-translate="project4_desc">نظام متكامل مخصص لمؤسسات النقل البترولي مملوك لشركة الرجف للنقليات</p>
+                    <div class="project-actions">
+                        <a href="#contact" class="btn btn-sm btn-primary" data-translate="to_view_version">
+                            <i class="fas fa-eye"></i>  لعرض نسخة يرجاء التواصل 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-footer">
+            <a href="#" class="btn btn-outline btn-lg">
+                <i class="fas fa-briefcase"></i> عرض جميع المشاريع
+            </a>
+        </div>
+    </section>
+    
+    <!-- قسم المهارات الجديد -->
+<section id="skills" class="skills-section">
+    <div class="section-header">
+        <h2 class="section-title" data-translate="skills_title">مهاراتي التقنية</h2>
+        <p class="section-subtitle" data-translate="skills_subtitle">الأدوات والتقنيات التي أتقنها</p>
+        <div class="section-divider"></div>
+    </div>
+    
+    <div class="skills-container">
+        <div class="skills-visual">
+            <div class="skills-orbit">
+                <div class="orbit-circle" style="--i:1">
+                    <span>Flutter</span>
+                    <div class="orbit-dot"></div>
+                </div>
+                <div class="orbit-circle" style="--i:2">
+                    <span>.NET</span>
+                    <div class="orbit-dot"></div>
+                </div>
+                <div class="orbit-circle" style="--i:3">
+                    <span>Angular</span>
+                    <div class="orbit-dot"></div>
+                </div>
+                <div class="orbit-circle" style="--i:4">
+                    <span>JavaScript</span>
+                    <div class="orbit-dot"></div>
+                </div>
+                <div class="orbit-circle" style="--i:5">
+                    <span>UI/UX</span>
+                    <div class="orbit-dot"></div>
+                </div>
+                <div class="orbit-center">
+                    <i class="fas fa-code"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="skills-list">
+            <div class="skill-category">
+                <h3 data-translate="mobile_development"><i class="fas fa-mobile-alt"></i> تطوير التطبيقات</h3>
+                <ul>
+                    <li>
+                        <div class="skill-info">
+                            <span class="skill-name">Flutter</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-level="95"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3 data-translate="web_development"><i class="fas fa-globe"></i> تطوير الويب</h3>
+                <ul>
+                    <li>
+                        <div class="skill-info">
+                            <span class="skill-name">.NET</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-level="90"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-info">
+                            <span class="skill-name">Angular</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <!-- قسم عني المحسن -->
+    <section id="about" class="about-section">
+        <div class="section-header">
+            <h2 class="section-title" data-translate="about_title">تعرف عليّ</h2>
+            <p class="section-subtitle" data-translate="about_subtitle">من أنا وماذا أقدم</p>
+            <div class="section-divider"></div>
+        </div>
+        
+        <div class="about-container">
+            
+            <div class="about-content">
+                <h3 data-translate="about_hello">مرحباً، أنا محمد الفرد</h3>
+                <p class="about-text" data-translate="about_desc">
+                    مطور تطبيقات  بخبرة تزيد عن 5 سنوات في تصميم وتطوير حلول برمجية مبتكرة. 
+                    أتمتع بشغف كبير لتحويل الأفكار إلى تطبيقات عملية تلبي احتياجات المستخدمين.
+                </p>
+                
+                <div class="about-details">
+                    <div class="detail-item">
+                        <i class="fas fa-user-tie"></i>
+                        <div>
+                            <h4 data-translate="full_name">الاسم الكامل</h4>
+                            <p>محمد الفرد</p>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-translate="email">البريد الإلكتروني</h4>
+                            <p>m.alfard@outlook.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-translate="location">الموقع</h4>
+                            <p>أبها، السعودية</p>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <i class="fas fa-language"></i>
+                        <div>
+                            <h4 data-translate="languages">اللغات</h4>
+                            <p>العربية، الإنجليزية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-actions">
+               
+                    <a href="#contact" class="btn btn-outline" data-translate="contact_me_btn">
+                        <i class="fas fa-paper-plane"></i> تواصل معي
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- قسم الخبرة والتعليم -->
+<section class="timeline-section" dir="auto">
+    <div class="section-header">
+        <h2 class="section-title" data-translate="journey_title">رحلتي المهنية</h2>
+        <p class="section-subtitle" data-translate="journey_subtitle">خبراتي الأكاديمية والعملية</p>
+        <div class="section-divider"></div>
+    </div>
+    
+    <div class="timeline-container">
+        <div class="timeline">
+            <!-- Flutter Developer -->
+            <div class="timeline-item">
+                <div class="timeline-item-inner">
+                    <div class="timeline-date" data-translate="date_flutter_dev">سبتمبر 2024 - يوليو 2025</div>
+                    <!-- <div class="timeline-dot">
+                        <div class="dot-pulse"></div>
+                    </div> -->
+                    <div class="timeline-content">
+                        <div class="content-badge">Flutter</div>
+                        <h4 data-translate="flutter_dev">مطور Flutter</h4>
+                        <span class="timeline-company" data-translate="company_renaissance">شركة أعمال النهضة القابضة</span>
+                        <p data-translate="flutter_dev_desc">
+                            تطوير تطبيقات عالية الأداء لأنظمة iOS وAndroid باستخدام Flutter وDart.
+                            تصميم واجهات تدعم الوضع الليلي، الاتجاه من اليمين لليسار، وتجربة مستخدم حديثة.
+                            دمج واجهات RESTful باستخدام بنية BLoC وProvider.
+                            تحسين الأداء وإدارة الحالة والذاكرة بكفاءة.
+                            دعم الترجمة وسهولة الوصول داخل التطبيق.
+                        </p>
+                        <div class="tech-tags">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>BLoC</span>
+                            <span>REST API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full Stack Freelance Developer -->
+            <div class="timeline-item">
+                <div class="timeline-item-inner">
+                    <div class="timeline-date" data-translate="date_freelance_dev">مارس 2023 - حتى الآن</div>
+                    <!-- <div class="timeline-dot">
+                        <div class="dot-pulse"></div>
+                    </div> -->
+                    <div class="timeline-content">
+                        <div class="content-badge">Freelance</div>
+                        <h4 data-translate="freelance_dev">مطور برمجيات حر</h4>
+                        <span class="timeline-company" data-translate="company_freelance">عمل مستقل</span>
+                        <p data-translate="freelance_dev_desc">
+                            تنفيذ تطبيقات كاملة باستخدام Angular 17 وTypeScript و.NET 6 Web API.
+                            إنشاء واجهات تفاعلية باستخدام Reactive Forms وRxJS.
+                            تطبيق مصادقة JWT آمنة، ودعم التحديثات اللحظية عبر SignalR.
+                            الالتزام بالمعمارية الطبقية لكتابة كود منظم وقابل للتوسع.
+                        </p>
+                        <div class="tech-tags">
+                            <span>Angular</span>
+                            <span>.NET</span>
+                            <span>TypeScript</span>
+                            <span>SignalR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Computer Teacher -->
+            <div class="timeline-item">
+                <div class="timeline-item-inner">
+                    <div class="timeline-date" data-translate="date_computer_teacher">أغسطس 2022 - يونيو 2024</div>
+                    <!-- <div class="timeline-dot">
+                        <div class="dot-pulse"></div>
+                    </div> -->
+                    <div class="timeline-content">
+                        <div class="content-badge">Education</div>
+                        <h4 data-translate="teacher">معلم حاسب آلي</h4>
+                        <span class="timeline-company" data-translate="company_school">مدارس التميز الإبداعية</span>
+                        <p data-translate="computer_teacher_desc">
+                            تدريس مفاهيم البرمجة والشبكات وأساسيات تكنولوجيا المعلومات باستخدام أساليب عملية.
+                            تطوير مهارات الطلاب التقنية من خلال مشاريع وأنشطة تطبيقية.
+                        </p>
+                        <div class="tech-tags">
+                            <span>Teaching</span>
+                            <span>Programming</span>
+                            <span>Networking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Internship -->
+            <div class="timeline-item">
+                <div class="timeline-item-inner">
+                    <div class="timeline-date" data-translate="date_intern">أبريل 2022 - يوليو 2022</div>
+                    <!-- <div class="timeline-dot">
+                        <div class="dot-pulse"></div>
+                    </div> -->
+                    <div class="timeline-content">
+                        <div class="content-badge">Internship</div>
+                        <h4 data-translate="intern">متدرب مطور خلفية</h4>
+                        <span class="timeline-company" data-translate="company_tribinnov">Tribinnov Africa (عن بُعد)</span>
+                        <p data-translate="intern_desc">
+                            المساهمة في تطوير خدمات .NET Web API ضمن فريق عمل عن بُعد.
+                            اكتساب خبرة في العمل الجماعي وأدوات التعاون البرمجي.
+                        </p>
+                        <div class="tech-tags">
+                            <span>.NET</span>
+                            <span>Web API</span>
+                            <span>Backend</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- التعليم -->
+            <div class="timeline-item">
+                <div class="timeline-item-inner">
+                    <div class="timeline-date" data-translate="date_education">يوليو 2016 - مايو 2021</div>
+                    <!-- <div class="timeline-dot">
+                        <div class="dot-pulse"></div>
+                    </div> -->
+                    <div class="timeline-content">
+                        <div class="content-badge">Education</div>
+                        <h4 data-translate="bachelor">بكالوريوس في نظم المعلومات</h4>
+                        <span class="timeline-company" data-translate="company_kku">جامعة الملك خالد</span>
+                        <p data-translate="education_desc">
+                            دراسة شاملة في نظم المعلومات وتحليل وتصميم الأنظمة.
+                            مشروع التخرج: نظام إدارة ذكي لتحسين العمليات التشغيلية.
+                        </p>
+                        <div class="tech-tags">
+                            <span>Information Systems</span>
+                            <span>Database Design</span>
+                            <span>System Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <!-- قسم التواصل المحسن -->
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2 class="section-title" data-translate="contact_title">تواصل معي</h2>
+            <p class="section-subtitle" data-translate="contact_subtitle">أنا متاح للعمل الحر والعقود</p>
+            <div class="section-divider"></div>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-box">
+                    <i class="fas fa-envelope"></i>
+                    <h4 data-translate="contact_email">البريد الإلكتروني</h4>
+                    <p>m.alfard@outlook.com</p>
+                    <a href="mailto:m.alfard@outlook.com" data-translate="send_email">ارسال رسالة</a>
+                </div>
+                
+                <div class="info-box">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4 data-translate="contact_phone">الهاتف</h4>
+                    <p>+966 59 302 5707</p>
+                    <a href="tel:+966593025707" data-translate="call_me">اتصل بي</a>
+                </div>
+                
+                
+                <!-- <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                </div> -->
+            </div>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name" data-translate="form_name">اسمك الكامل</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email" data-translate="form_email">بريدك الإلكتروني</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject" data-translate="form_subject">موضوع الرسالة</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" required></textarea>
+                        <label for="message" data-translate="form_message">رسالتك</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block" data-translate="send_message">
+                        <i class="fas fa-paper-plane"></i> إرسال الرسالة
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- تذييل الصفحة المحسن -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="#home">محمد الفرد</a>
+                <p>مطور تطبيقات</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4 data-translate="footer_links">روابط سريعة</h4>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#projects">أعمالي</a></li>
+                    <li><a href="#skills">مهاراتي</a></li>
+                    <li><a href="#about">عني</a></li>
+                    <li><a href="#contact">تواصل</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-services">
+                <h4 data-translate="footer_services">خدماتي</h4>
+                <ul>
+                    <li><a href="#">تطوير تطبيقات الجوال</a></li>
+                    <li><a href="#">تطوير مواقع الويب</a></li>
+                    <li><a href="#">تصميم واجهات المستخدم</a></li>
+                    <li><a href="#">استشارات تقنية</a></li>
+                </ul>
+            </div>
+        
+        </div>
+        
+        <div class="footer-bottom">
+            <p data-translate="footer_rights">&copy;2025 جميع الحقوق محفوظة  <a href="#">محمد الفرد</a></p>
+        </div>
+        <a href="#home" class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </footer>
+    
+    <!-- الأكواد البرمجية -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
