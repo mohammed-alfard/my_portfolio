@@ -103,68 +103,66 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 2. التحكم في سرعة التمرير
-    let lastKnownScrollPosition = 0;
-    let ticking = false;
-    let scrollSpeed = 1;
+    // احذف أو عطل جميع أكواد التحكم أو تأثيرات التمرير
+    // احذف الأكواد التالية أو علقها:
 
-    window.addEventListener('scroll', function(e) {
-        lastKnownScrollPosition = window.scrollY;
-        
-        if (!ticking) {
-            window.requestAnimationFrame(function() {
-                const currentScroll = window.scrollY;
-                const delta = (currentScroll - lastKnownScrollPosition) * scrollSpeed;
-                window.scrollTo(0, lastKnownScrollPosition + delta);
-                ticking = false;
-            });
-            
-            ticking = true;
+    /*
+// 2. التحكم في سرعة التمرير
+let lastKnownScrollPosition = 0;
+let ticking = false;
+let scrollSpeed = 1;
+
+window.addEventListener('scroll', function(e) {
+    lastKnownScrollPosition = window.scrollY;
+    if (!ticking) {
+        window.requestAnimationFrame(function() {
+            const currentScroll = window.scrollY;
+            const delta = (currentScroll - lastKnownScrollPosition) * scrollSpeed;
+            window.scrollTo(0, lastKnownScrollPosition + delta);
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+
+// 4. تأثير الالتقاط للأقسام
+const sections = document.querySelectorAll('section');
+let isAnimating = false;
+
+window.addEventListener('wheel', function(e) {
+    if (isAnimating) return;
+    const currentScroll = window.scrollY;
+    const deltaY = e.deltaY;
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (currentScroll >= sectionTop && currentScroll < sectionTop + sectionHeight) {
+            if (deltaY > 0 && currentScroll < sectionTop + sectionHeight - window.innerHeight) {
+                return;
+            } else if (deltaY < 0 && currentScroll > sectionTop) {
+                return;
+            } else {
+                e.preventDefault();
+                isAnimating = true;
+                let targetScroll;
+                if (deltaY > 0) {
+                    targetScroll = sectionTop + sectionHeight;
+                } else {
+                    targetScroll = sectionTop - window.innerHeight;
+                }
+                window.scrollTo({
+                    top: targetScroll,
+                    behavior: 'smooth'
+                });
+                setTimeout(() => {
+                    isAnimating = false;
+                }, 1000);
+            }
         }
     });
+}, { passive: false });
+*/
 
-    // 4. تأثير الالتقاط للأقسام
-    const sections = document.querySelectorAll('section');
-    let isAnimating = false;
-
-    window.addEventListener('wheel', function(e) {
-        if (isAnimating) return;
-        
-        const currentScroll = window.scrollY;
-        const deltaY = e.deltaY;
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            
-            if (currentScroll >= sectionTop && currentScroll < sectionTop + sectionHeight) {
-                if (deltaY > 0 && currentScroll < sectionTop + sectionHeight - window.innerHeight) {
-                    return;
-                } else if (deltaY < 0 && currentScroll > sectionTop) {
-                    return;
-                } else {
-                    e.preventDefault();
-                    isAnimating = true;
-                    
-                    let targetScroll;
-                    if (deltaY > 0) {
-                        targetScroll = sectionTop + sectionHeight;
-                    } else {
-                        targetScroll = sectionTop - window.innerHeight;
-                    }
-                    
-                    window.scrollTo({
-                        top: targetScroll,
-                        behavior: 'smooth'
-                    });
-                    
-                    setTimeout(() => {
-                        isAnimating = false;
-                    }, 1000);
-                }
-            }
-        });
-    }, { passive: false });
     // تهيئة تأثيرات الجسيمات
     if (document.getElementById('particles-js')) {
         particlesJS('particles-js', {
@@ -682,7 +680,6 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     // فتح واتساب
     window.open(`https://wa.me/${phone}?text=${encodedText}`, '_blank');
 });
-
 
 // الترجمات
 const translations = {
