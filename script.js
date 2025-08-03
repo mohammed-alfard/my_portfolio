@@ -1,7 +1,7 @@
 // تهيئة الصفحة عند التحميل
 
 
-// Function to detect mobile devices
+// // Function to detect mobile devices
 function isMobileDevice() {
     // Check for touch screen (common in mobile devices)
     const hasTouchScreen = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
@@ -16,42 +16,50 @@ function isMobileDevice() {
     // If any of these conditions are true, it's likely a mobile device
     return hasTouchScreen || isMobile || isSmallScreen;
 }
-
+document.addEventListener('DOMContentLoaded', function() {
+    if (isMobileDevice()) {
+        const vscodeContainer = document.querySelector('.vscode-container');
+        if (vscodeContainer) {
+            vscodeContainer.style.display = 'none';
+        }
+    }
+    // ...existing code...
+});
 // Check if mobile and redirect or show message
-if (isMobileDevice()) {
-    // Create a full-screen blocking message
-    document.body.innerHTML = `
-        <div style="
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #1a1a2e;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            z-index: 9999;
-            font-family: Arial, sans-serif;
-        ">
-            <h1 style="color: #4cc9f0; margin-bottom: 20px;">Access Restricted</h1>
-            <p style="font-size: 18px; max-width: 600px; line-height: 1.6;">
-                This portfolio is optimized for desktop/laptop viewing only.<br>
-                Please access this website from a computer to view my software engineering portfolio.
-            </p>
-            <p style="margin-top: 30px; color: #aaa;">
-                (Mobile device detected: ${navigator.userAgent})
-            </p>
-        </div>
-    `;
+// if (isMobileDevice()) {
+//     // Create a full-screen blocking message
+//     document.body.innerHTML = `
+//         <div style="
+//             position: fixed;
+//             top: 0;
+//             left: 0;
+//             width: 100%;
+//             height: 100%;
+//             background-color: #1a1a2e;
+//             color: white;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+//             text-align: center;
+//             padding: 20px;
+//             z-index: 9999;
+//             font-family: Arial, sans-serif;
+//         ">
+//             <h1 style="color: #4cc9f0; margin-bottom: 20px;">Access Restricted</h1>
+//             <p style="font-size: 18px; max-width: 600px; line-height: 1.6;">
+//                 This portfolio is optimized for desktop/laptop viewing only.<br>
+//                 Please access this website from a computer to view my software engineering portfolio.
+//             </p>
+//             <p style="margin-top: 30px; color: #aaa;">
+//                 (Mobile device detected: ${navigator.userAgent})
+//             </p>
+//         </div>
+//     `;
     
-    // Prevent any further interaction
-    document.body.style.overflow = 'hidden';
-}
+//     // Prevent any further interaction
+//     document.body.style.overflow = 'hidden';
+// }
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -112,33 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             ticking = true;
-        }
-    });
-
-    // 3. تأثير القصور الذاتي
-    let isScrolling = false;
-    let scrollTimeout;
-
-    window.addEventListener('scroll', function() {
-        isScrolling = true;
-        clearTimeout(scrollTimeout);
-        
-        scrollTimeout = setTimeout(function() {
-            isScrolling = false;
-        }, 100);
-        
-        if (!isScrolling) {
-            const currentScroll = window.scrollY;
-            const deceleration = 0.95;
-            
-            function slowScroll() {
-                window.scrollTo(0, currentScroll * deceleration);
-                if (Math.abs(currentScroll - window.scrollY) > 1) {
-                    requestAnimationFrame(slowScroll);
-                }
-            }
-            
-            requestAnimationFrame(slowScroll);
         }
     });
 
